@@ -69,23 +69,23 @@ int findWheelDirection(int t, vector<vector<int>>& wheels, int k, vector<pair<in
 int main(){
 
     int t;
-    std::cin >> t;
+    cin >> t;
 
     vector<vector<int>> wheels(t, vector<int>(8));
     for(int i=0; i<t; i++){
         string s;
-        std::cin >> s;
+        cin >> s;
         for(int j=0; j<8; j++){
             wheels[i][j] = s[j] - '0';
         }
     }
 
     int k;
-    std::cin >> k;
+    cin >> k;
     vector<pair<int, int>> info(k);
     for(int i=0; i<k; i++){
         int wheel_num, dir;
-        std::cin >> wheel_num >> dir;
+        cin >> wheel_num >> dir;
         info[i].first = wheel_num;
         info[i].second = dir;
     }
@@ -94,7 +94,7 @@ int main(){
 
     final_s_num = findWheelDirection(t, wheels, k, info);
 
-    std::cout << final_s_num;
+    cout << final_s_num;
 
     return 0;
 }
